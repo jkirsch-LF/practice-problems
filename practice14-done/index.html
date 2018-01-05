@@ -6,12 +6,12 @@
 
     <script>
 
-        function arrayFactors(array1){
+        function arrayFactors(array1) {
 
             var numObj = {};
             var numObjIndex = 0;
 
-            while( numObjIndex < array1.length ){
+            while (numObjIndex < array1.length) {
 
                 numObj[array1[numObjIndex]] = find_factors(array1[numObjIndex]);
 
@@ -20,13 +20,13 @@
             return numObj;
         }
 
-        function find_factors(num1){
+        function find_factors(num1) {
 
-            var newArray      = [];
+            var newArray = [];
             var newArrayIndex = 0;
 
-            for(var index = 0 ; index <= num1 ; index ++){
-                if(num1%index === 0){
+            for (var index = 0; index <= num1; index++) {
+                if (num1 % index === 0) {
                     newArray[newArrayIndex++] = index;
                 }
             }
@@ -35,8 +35,7 @@
 
         }
 
-        console.log(arrayFactors([40,27,84,123,4008,3,67,900029]));
-
+        console.log(arrayFactors([40, 27, 84, 123, 4008, 3, 67, 900029]));
 
 
     </script>
