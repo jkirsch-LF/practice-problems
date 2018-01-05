@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 07</title>
+    <script>
+
+        function translate(string){
+            var transArray = string.split(" ");
+            for( var index = 0; index < transArray.length; index++ ){
+
+                if(isVowel(transArray[index][0])){
+                    transArray[index]+='way';
+                }
+
+                if(!isVowel(transArray[index][0])){
+                    var tempCons = transArray[index][0];
+                    transArray[index] = transArray[index].slice(1,transArray[index].length);
+                    transArray[index] += tempCons;
+                    transArray[index] += 'ay';
+                }
+
+                console.log(transArray);
+            }
+
+        }
+
+
+        function isVowel(letter){
+            var vowels = ['a','e','i','o','u'];
+            for(var vowelIndex = 0; vowelIndex < vowels.length ; vowelIndex++){
+                if( letter === vowels[vowelIndex]){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        translate("Hello my name is Stu");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

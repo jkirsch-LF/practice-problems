@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 03</title>
+    <script>
+
+        var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+
+        function groupArray(array){
+
+            var myNewArray    = [];
+            var stringArray   = [];
+            var stringIndex   = 0
+            var numberArray   = [];
+            var numberIndex   = 0;
+            var boolArray     = [];
+            var boolIndex     = 0;
+
+
+            console.log(myArray.length);
+            for( var myArrayIndex = 0; myArrayIndex < array.length; myArrayIndex++ ){
+
+                var arrayValue = array[myArrayIndex];
+
+                if (typeof arrayValue === "string") {
+                    stringArray[stringIndex] = arrayValue;
+                    stringIndex++;
+                    console.log("Add to string array");
+                } else if(typeof arrayValue === "number") {
+                    numberArray[numberIndex] = arrayValue;
+                    numberIndex++;
+                    console.log("Add to number array");
+                } else if(typeof arrayValue === "boolean") {
+                    boolArray[boolIndex]   = arrayValue;
+                    boolIndex++;
+                    console.log("Add to boolean array");
+                }
+
+            }
+
+            myNewArray = [stringArray, numberArray, boolArray];
+
+            return myNewArray;
+        }
+        console.log(groupArray(myArray));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

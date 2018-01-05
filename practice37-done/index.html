@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 37</title>
+
+
+    <script>
+        function everyOtherCap(string1){
+
+            var newString = "";
+
+            for( var index = 0; index < string1.length; index++ ){
+                if(string1[index] !== " "){
+                    if(index%2 !== 0){
+                        newString += string1[index].toUpperCase();
+                    } else {
+                        newString += string1[index];
+                    }
+                } else {
+                    newString += string1[index];
+                }
+            }
+            return newString;
+        }
+
+        console.log(everyOtherCap("what an incredible child you have"));
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

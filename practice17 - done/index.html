@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 17</title>
+    <script>
+
+        function skippy_numbers(num1){
+            var outputArray = [];
+            outputArray[0] = num1;
+            for(var index = 1; index < 8 ; index ++){
+                if(index%2 === 1){
+                    outputArray[index] = ++num1;
+                } else {
+                    outputArray[index] = (num1+=2);
+                }
+            }
+            return outputArray;
+        }
+
+
+        console.log(skippy_numbers(2));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 36</title>
+    <script>
+
+        function removeConsonants(string1){
+            var newString = "";
+            for( var index = 0; index < string1.length; index++ ){
+                if(isVowel(string1[index])){
+                    newString += string1[index];
+                }
+            }
+            return newString;
+        }
+
+        function isVowel(letter){
+            var vowels = ['a','e','i','o','u'];
+            for(var vowelIndex = 0; vowelIndex < vowels.length ; vowelIndex++){
+                if( letter === vowels[vowelIndex]){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        console.log(removeConsonants("four score and seven years ago"));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 33</title>
+    <script>
+
+        function invert_negatives(num1){
+            if( typeof num1 === 'number' && num1 > 0 ){
+                return (num1-(num1*2));
+            } else if ( typeof num1 === 'number' && num1 < 0 ){
+                return num1;
+            } else {
+                return false;
+            }
+        }
+
+        console.log(invert_negatives(-5));
+        console.log(invert_negatives(4000));
+        console.log(invert_negatives('puppies'));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

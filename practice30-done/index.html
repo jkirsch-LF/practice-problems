@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 30</title>
+    <script>
+
+        function random_range(start_num, end_num){
+
+            var selector;
+
+            if(typeof start_num === "number"){
+                selector = Math.floor(Math.random()*(end_num-start_num));
+            } else {
+                selector = start_num[Math.floor(Math.random()*(start_num.length))];
+            }
+
+            return selector;
+        }
+
+        console.log(random_range(2,15));
+        console.log(random_range(1,100));
+        console.log(random_range(['a','b','c','d','e']));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 28</title>
+    <script>
+
+        function romanNumerals(num1){
+
+            var originalNum = num1.toString();
+            var newString   = "";
+            var endLoop     = false;
+
+            while( !endLoop ){
+                if( num1 >= 1000 ){
+                    newString += 'M';
+                    num1 -= 1000;
+                } else if ( num1 >= 500 ){
+                    newString += 'D';
+                    num1 -= 500;
+                } else if ( num1 >= 400 ){
+                    newString += 'CD';
+                    num1 -= 100;
+                } else if ( num1 >= 100 ){
+                    newString += 'C';
+                    num1 -= 100;
+                } else if ( num1 >= 90 ){
+                    newString += 'XC';
+                    num1 -= 100;
+                } else if ( num1 >= 50 ){
+                    newString += 'L';
+                    num1 -= 50;
+                } else if ( num1 >= 40 ){
+                    newString += 'XC';
+                    num1 -= 100;
+                } else if ( num1 >= 10 ){
+                    newString += 'X';
+                    num1 -= 10;
+                } else if ( num1 >= 9 ){
+                    newString += 'IX';
+                    num1 -= 100;
+                } else if ( num1 >= 5 ){
+                    newString += 'V';
+                    num1 -= 5;
+                } else if ( num1 >= 4 ){
+                    newString += 'IV';
+                    num1 -= 100;
+                } else if ( num1 >= 1 ){
+                    newString+= 'I';
+                    num1 -= 1;
+                } else {
+                    endLoop = true;
+                }
+            }
+            return newString;
+        }
+
+
+        var the_number = 4999;
+        console.log(romanNumerals(the_number));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

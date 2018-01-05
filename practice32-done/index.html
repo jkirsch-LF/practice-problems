@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 32</title>
+
+    <script>
+
+        function find_middle_letters(string1){
+            var middleLetter;
+            if(string1.length%2 === 1){
+                middleLetter = string1[Math.floor(string1.length/2)];
+            } else {
+                middleLetter = string1[(string1.length/2)-1] + string1[string1.length/2];
+
+            }
+            return middleLetter;
+        }
+
+        console.log(find_middle_letters('Dumbledoor'));
+        console.log(find_middle_letters('Redcule'));
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

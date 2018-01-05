@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 13</title>
+    <script>
+        function math_sequences(num1, num2){
+            var outputArray= [];
+
+            var ans1 = num1+num2;
+            var ans2 = num1-num2;
+            var ans3 = num1*num2;
+            var ans4 = num1/num2;
+
+            outputArray[0] = num1 + " + " + num2 + " = " + ans1;
+            outputArray[1] = num1 + " - " + num2 + " = " + ans2;
+            outputArray[2] = num1 + " * " + num2 + " = " + ans3;
+            outputArray[3] = num1 + " / " + num2 + " = " + ans4;
+            return outputArray;
+        }
+        console.log(math_sequences(2,5));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

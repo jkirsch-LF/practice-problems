@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 06</title>
+    <script>
+
+        function fibSequence(num1){
+            var a = 1;
+            var b = 0;
+            var temp;
+            var fibArray = [];
+            var fibIndex = 0;
+            while(num1 > 0){
+                fibArray[fibIndex] = b;
+                fibIndex++;
+                temp = a;
+                a = a + b;
+                b = temp;
+                num1--;
+            }
+            return fibArray;
+        }
+        console.log(fibSequence(12));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 04</title>
+
+    <script>
+
+        var myArray = ['mouse', 'cat', 'dog', 'human'];
+
+        function sortArray(array){
+            for( var bubbleIndex = 0; bubbleIndex < array.length-1; bubbleIndex++){
+                if(array[bubbleIndex] > array[bubbleIndex+1]){
+                    var temp = array[bubbleIndex];
+                    array[bubbleIndex] = array[bubbleIndex+1];
+                    array[bubbleIndex+1] = temp;
+                }
+            }
+            return array;
+        }
+
+        console.log(sortArray(myArray));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

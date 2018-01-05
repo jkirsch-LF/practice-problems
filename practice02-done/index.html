@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 02</title>
+    <script>
+
+        var myArray = ['hello', 45, 'Bob', 'what', '23'];
+
+        function arrayReverse(array){
+
+            var myNewArray = [];
+            var newArrayIndex = 0;
+
+            for(var myArrayIndex = array.length-1; myArrayIndex >= 0; myArrayIndex-- ){
+                myNewArray[newArrayIndex] = array[myArrayIndex];
+                newArrayIndex++;
+            }
+            return myNewArray;
+        }
+        console.log(arrayReverse(myArray));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

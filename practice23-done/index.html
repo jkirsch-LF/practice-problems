@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 23</title>
+    <script>
+        var factor_number = 336;
+
+        function find_factors(num1){
+
+            var newArray      = [];
+            var newArrayIndex = 0;
+
+            for(var index = 0 ; index <= num1 ; index ++){
+                if(num1%index === 0){
+                    newArray[newArrayIndex++] = index;
+                }
+            }
+            return newArray;
+        }
+
+        console.log(find_factors(factor_number));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

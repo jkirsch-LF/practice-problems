@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 15</title>
+    <script>
+
+        function numeric_toggles(num1){
+
+            var newArray = [];
+            var incrementer = 2;
+
+            for( var index = 0 ; index < 8 ; index+= 2){
+
+                if(index%4 === 0 && index > 0){
+                    num1 = -num1;
+                    num1 += incrementer;
+                    newArray[index] = num1;
+                    num1 += incrementer;
+                    newArray[index+1] = num1;
+                } else if (index%2 === 0 && index > 0){
+                    num1 = (0-num1)-incrementer;
+                    newArray[index] = num1;
+                    num1 -= incrementer;
+                    newArray[index+1] = num1;
+                } else {
+                    num1 += incrementer;
+                    newArray[index] = num1;
+                    num1 += incrementer;
+                    newArray[index+1] = num1;
+                }
+
+                incrementer++;
+            }
+            return newArray;
+        }
+        console.log(numeric_toggles(2));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

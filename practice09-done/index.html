@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 09</title>
+    <script>
+
+        var myArray = ['cat','caterpillar','whale','accurate','smile','cactus','cute'];
+
+        function fittingWords( string1, array1 ){
+            var newArray = [];
+            var newArrayIndex = 0;
+            var letterTally = 0;
+
+            for( var index = 0; index < array1.length; index++ ){
+                letterTally = 0;
+                for( var letterIndex = 0; letterIndex < array1[index].length ; letterIndex++ ){
+                    var compareIndex = 0;
+                    while(compareIndex < string1.length && letterTally < string1.length){
+                        if( string1[compareIndex] === array1[index][letterIndex]) {
+                            letterTally++;
+                        }
+                        if( letterTally === string1.length){
+                            newArray[newArrayIndex++] = array1[index];
+                        }
+                        compareIndex++
+                    }
+                }
+            }
+            return newArray;
+        }
+        console.log(fittingWords('cat', myArray));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
